@@ -33,9 +33,10 @@ public class ViewController {
     }
 
     // ✅ OTHER PAGES
-    @GetMapping("/page01")
-    public String page01() {
-        return "page01";
+    @GetMapping("/home")
+    public String home(Model model) {
+        model.addAttribute("username", "John Doe");
+        return "home";
     }
 
     @GetMapping("/page02")
