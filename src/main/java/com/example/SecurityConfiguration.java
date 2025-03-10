@@ -41,7 +41,7 @@ public class SecurityConfiguration {
         
         http.formLogin()
             .loginPage("/login").permitAll()
-            .defaultSuccessUrl("/page01", true)
+            .defaultSuccessUrl("/home", true)
             .failureUrl("/login?error=true");
 
         http.logout()
