@@ -39,6 +39,11 @@ public class ViewController {
         return "home";
     }
 
+    @GetMapping("/signup")
+    public String signup() {
+        return "signup";  // Loads src/main/resources/templates/signup.html
+    }
+
     @GetMapping("/page02")
     public String page02() {
         return "page02";

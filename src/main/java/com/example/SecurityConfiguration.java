@@ -33,7 +33,7 @@ public class SecurityConfiguration {
         .disable()
         .authorizeHttpRequests((authorize) -> authorize
         		.dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
-                .requestMatchers("/login","/css/**", "/images/background.jpg", "/images/logo.png").permitAll()
+                .requestMatchers("/login","/css/**", "/images/background.jpg", "/images/logo.png","/signup", "/js/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/profile/*").permitAll()
                 .anyRequest().authenticated())
             .securityContext((securityContext) -> securityContext
